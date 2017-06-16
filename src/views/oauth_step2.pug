@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Setup Mattermost-Jira Bridge
+        script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", type='text/css' )
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css", type='text/css' )
+    body
+        h1 Setup Mattermost-Jira Bridge
+        h3 Step 2
+        div(class="panel panel-default" style="width: 600px; margin: 15px;")
+            | Open this URL in a seperate tab to allow this application to connect to JIRA.
+            br
+            | The open site shows the
+            b verification code
+            | . Copy the code and add it in the input field below
+            br
+            a(href=jira_oauth_url, target='_blank') Request JIRA
+        form(style="width: 600px; margin: 15px;" action="/setup/step2" method="post")
+            div(class="form-group")
+                label(for="verification_code") Verification Code
+                input(type="text" class="form-control" id="verification_code" name="verification_code" aria-describedby="verification_codeHelp" required placeholder="verification Code")
+                small(id="verification_codeHelp" class="form-text text-muted") This Code is needed to verify the access.
+            button(type="submit" class="btn btn-primary") Submit

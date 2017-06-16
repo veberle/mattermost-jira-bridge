@@ -1,0 +1,36 @@
+doctype  html
+html
+    head
+        meta(charset="UTF-8")
+        title Setup Mattermost-Jira Bridge
+        script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    body
+        h1 Setup Mattermost-Jira Bridge
+        h3 Step 1
+        form(style="width: 600px; margin: 15px;" action="/setup/step1" method="post")
+            h3 Mattermost
+            div(class="form-group")
+                label(for="mattermost_token") Mattermost Token
+                input(type="text" class="form-control" id="mattermost_token" name="mattermost_token" aria-describedby="mattermost_tokenHelp" required placeholder="Mattermost Token")
+                small(id="mattermost_tokenHelp" class="form-text text-muted") This Token is send by Mattermost and is needed to verify the API post.
+            h3 Jira
+            div(class="form-group")
+                label(for="jira_url") Jira URL
+                input(type="text" class="form-control" id="jira_url" name="jira_url" aria-describedby="jira_urlHelp" required placeholder="Jira Url")
+                small(id="jira_urlHelp" class="form-text text-muted") This is the URL to your JIRA instance.)
+            div(class="form-group")
+                label(for="consumer_key") Consumer Key
+                input(type="text" class="form-control" id="consumer_key" name="consumer_key" aria-describedby="consumer_keyHelp" required placeholder="Consumer Key")
+                small(id="consumer_keyHelp" class="form-text text-muted") This is the consumer key as known by JIRA.)
+            div(class="form-group")
+                label(for="shared_secret") Shared Secret
+                input(type="text" class="form-control" id="shared_secret" name="shared_secret" required aria-describedby="shared_secretHelp" placeholder="Shared Secret")
+                small(id="shared_secretHelp" class="form-text text-muted") This is the shared secret as known by JIRA.
+            div(class="form-group")
+                label(for="private_key") Private Key
+                textarea(class="form-control" id="private_key" name="private_key" aria-describedby="private_keyHelp" required placeholder="Private Key" rows="5")
+                small(id="private_keyHelp" class="form-text text-muted") This is the private key. The public key must be known by JIRA.
+            button(type="submit" class="btn btn-primary") Submit

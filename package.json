@@ -1,0 +1,18 @@
+{
+  "name": "mattermost-jira-bridge",
+  "version": "1.0.0",
+  "description": "A bridge for mattermost slash commands to query jira issues.",
+  "author": "Vincent Eberle",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.13.3",
+    "jira-connector": "^2.6.0",
+    "make-runnable": "^1.1.1",
+    "pug": "^2.0.0-rc.2",
+    "request": "^2.81.0"
+  }
+}
