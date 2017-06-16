@@ -1,7 +1,8 @@
 # Mattermost-Jira Bridge
 
 ## What is this?
-This is a bridge between [Mattermost](https://about.mattermost.com/) an [Jira](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjQiMSTvsPUAhUBu-0KHRmxAvMYABAAGgJkZw&ohost=www.google.de&cid=CAESEeD2IQUXvscPJrQAikjBt0O6&sig=AOD64_2nfU9Ip1lvP3NJnErY2_lh1Lz8_w&q=&ved=0ahUKEwjbnL6TvsPUAhVqLsAKHchFBX8Q0QwIJQ&adurl=).
+This is a bridge between [Mattermost](https://about.mattermost.com/) and
+ [Jira](https://de.atlassian.com/software/jira).
 This allows for users to use mattermost slash commands to query jira issues.
 
 ![example](screen.png)
@@ -49,5 +50,5 @@ docker build -t <myname>/mattermost-jira-bridge .
 
 ## Start the container
 ```
-docker run -p 3000:3000 -d wlps/mattermost-jira-bridge
+docker run -p 3000:3000 -d <myname>/mattermost-jira-bridge
 ```
